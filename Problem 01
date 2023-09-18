@@ -1,0 +1,17 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        index_01=[]
+        copy_list=nums
+        a=0
+        for x in range(0,len(nums)):
+            for index, number in enumerate(nums):
+                if a!=index:
+                    if copy_list[a]+number==target:
+                        # print("Found")
+                        if len(index_01)<=1:
+                            index_01.append(a)
+                            index_01.append(index)
+                            break
+         
+            a=a+1
+        return(index_01)
